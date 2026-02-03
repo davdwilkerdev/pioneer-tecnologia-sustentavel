@@ -206,6 +206,24 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.hero}
             className={classNames(projectcss.all, sty.hero)}
           >
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img__d3ZR6)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"310%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"auto"}
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/professional_services/images/asdasdJpg.jpg",
+                fullWidth: 1957,
+                fullHeight: 1492,
+                aspectRatio: undefined
+              }}
+            />
+
             <div
               data-plasmic-name={"container7"}
               data-plasmic-override={overrides.container7}
@@ -241,7 +259,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(sty.img__lJelr)}
                           displayHeight={
                             hasVariant(globalVariants, "screen", "mobileOnly")
-                              ? "0px"
+                              ? "76px"
                               : "240px"
                           }
                           displayMaxHeight={"1064px"}
@@ -286,16 +304,38 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.h1__ekx2X
                       )}
                     >
-                      <React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#00882B", fontWeight: 700 }}
-                        >
-                          {"alto rendimento, baixo impacto ambiental"}
-                        </span>
-                      </React.Fragment>
+                      {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#00882B", fontWeight: 700 }}
+                          >
+                            {"alto rendimento,"}
+                          </span>
+                          <React.Fragment>{"\n"}</React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#00882B", fontWeight: 700 }}
+                          >
+                            {"baixo impacto ambiental"}
+                          </span>
+                        </React.Fragment>
+                      ) : (
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#00882B", fontWeight: 700 }}
+                          >
+                            {"alto rendimento, baixo impacto ambiental"}
+                          </span>
+                        </React.Fragment>
+                      )}
                     </h1>
                     <div
                       className={classNames(
@@ -340,6 +380,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.button___75PMe
                         )}
                         color={"green"}
+                        link={"http://wa.me/5516991366165"}
                         submitsForm={true}
                       >
                         <PhoneVectorSvgIcon
@@ -358,7 +399,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           {hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? "Get In touch"
+                            ? "Entre em contato"
                             : "Entre em contato"}
                         </div>
                       </Button>

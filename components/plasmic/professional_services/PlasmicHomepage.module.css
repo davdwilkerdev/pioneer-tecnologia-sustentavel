@@ -36,7 +36,28 @@
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .hero {
-    padding: 30px 12px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 12px;
+    background:
+      linear-gradient(90deg, #e9fff0 47%, transparent 69%) 0% 0% / 100% 100%
+        repeat,
+      url("/plasmic/professional_services/images/dundoJpg.jpg") left auto top auto / contain no-repeat
+        content-box border-box,
+      url("/plasmic/professional_services/images/fundoSite2Jpg.jpg") left 75% bottom 70% / 450px 450px repeat;
+  }
+}
+.img__d3ZR6 {
+  object-fit: fill;
+  max-width: 310%;
+  display: none;
+}
+.img__d3ZR6 > picture > img {
+  object-fit: fill;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .img__d3ZR6 {
+    display: block;
   }
 }
 .container7 {
@@ -95,7 +116,7 @@
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .info {
-    padding: 0px 0px 16px;
+    padding: 0px 0px 27px;
   }
 }
 .freeBox__bgjG {
@@ -114,6 +135,7 @@
 @media (min-width: 0px) and (max-width: 767px) {
   .freeBox__bgjG {
     max-width: 200px;
+    margin-top: -26px;
   }
 }
 .freeBox___3E6AD {
@@ -160,7 +182,8 @@
   .img__lJelr {
     animation: none;
     margin-bottom: 0px;
-    height: 0px;
+    height: 76px;
+    display: none;
   }
 }
 .h1__kcPhv {
@@ -182,10 +205,12 @@
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .h1__kcPhv {
-    font-size: 20px;
-    width: 100%;
+    font-size: 30px;
+    width: 313px;
     align-self: flex-start;
-    min-width: 0;
+    max-width: 342px;
+    padding-right: 0px;
+    text-align: center;
   }
 }
 .h1__ekx2X {
@@ -203,10 +228,11 @@
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .h1__ekx2X {
-    font-size: 20px;
-    width: 100%;
+    font-size: 15px;
+    width: 317px;
     align-self: flex-start;
-    min-width: 0;
+    margin-top: -22px;
+    text-align: center;
   }
 }
 .text___0Sn00 {
@@ -221,12 +247,13 @@
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .text___0Sn00 {
-    font-size: 14px;
-    width: 100%;
+    font-size: 10px;
+    width: 315px;
     align-self: flex-start;
     line-height: 1.25;
-    min-width: 0;
-    margin: 0px;
+    max-width: 493px;
+    text-align: center;
+    margin: -20px 0px 0px;
   }
 }
 .reveal:global(.__wab_instance) {
@@ -254,6 +281,14 @@
 @media (min-width: 0px) and (max-width: 767px) {
   .button___75PMe:global(.__wab_instance) {
     height: 36px;
+    align-self: center;
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-left: 61px;
+    margin-bottom: -9px;
+    margin-top: -12px;
+    width: 243px;
   }
 }
 .svg__emvB {
@@ -280,6 +315,7 @@
 @media (min-width: 0px) and (max-width: 767px) {
   .text___2UDzQ {
     font-size: 14px;
+    line-height: 2.28;
   }
 }
 .svg__oV7Xc {

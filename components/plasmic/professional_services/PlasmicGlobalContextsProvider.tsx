@@ -9,18 +9,23 @@ import * as React from "react";
 
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: m1XWyRcacryEyco6uPV1CR/projectModule
 import { ParallaxProviderWrapper } from "@plasmicpkgs/react-scroll-parallax";
+import { AntdConfigProvider } from "@plasmicpkgs/antd5/skinny/registerConfigProvider";
 
 export interface GlobalContextsProviderProps {
   children?: React.ReactElement;
   parallaxProviderWrapperProps?: Partial<
     Omit<React.ComponentProps<typeof ParallaxProviderWrapper>, "children">
   >;
+  antdConfigProviderProps?: Partial<
+    Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
+  >;
 }
 
 export default function GlobalContextsProvider(
   props: GlobalContextsProviderProps
 ) {
-  const { children, parallaxProviderWrapperProps } = props;
+  const { children, parallaxProviderWrapperProps, antdConfigProviderProps } =
+    props;
 
   return (
     <ParallaxProviderWrapper
@@ -32,7 +37,100 @@ export default function GlobalContextsProvider(
           : undefined
       }
     >
-      {children}
+      <AntdConfigProvider
+        {...antdConfigProviderProps}
+        borderRadius={
+          antdConfigProviderProps && "borderRadius" in antdConfigProviderProps
+            ? antdConfigProviderProps.borderRadius!
+            : 6
+        }
+        colorBgBase={
+          antdConfigProviderProps && "colorBgBase" in antdConfigProviderProps
+            ? antdConfigProviderProps.colorBgBase!
+            : "#ffffff"
+        }
+        colorError={
+          antdConfigProviderProps && "colorError" in antdConfigProviderProps
+            ? antdConfigProviderProps.colorError!
+            : "#ff4d4f"
+        }
+        colorInfo={
+          antdConfigProviderProps && "colorInfo" in antdConfigProviderProps
+            ? antdConfigProviderProps.colorInfo!
+            : "#1677ff"
+        }
+        colorPrimary={
+          antdConfigProviderProps && "colorPrimary" in antdConfigProviderProps
+            ? antdConfigProviderProps.colorPrimary!
+            : "#1677ff"
+        }
+        colorSuccess={
+          antdConfigProviderProps && "colorSuccess" in antdConfigProviderProps
+            ? antdConfigProviderProps.colorSuccess!
+            : "#52c41a"
+        }
+        colorWarning={
+          antdConfigProviderProps && "colorWarning" in antdConfigProviderProps
+            ? antdConfigProviderProps.colorWarning!
+            : "#faad14"
+        }
+        controlHeight={
+          antdConfigProviderProps && "controlHeight" in antdConfigProviderProps
+            ? antdConfigProviderProps.controlHeight!
+            : 32
+        }
+        defaultDark={
+          antdConfigProviderProps && "defaultDark" in antdConfigProviderProps
+            ? antdConfigProviderProps.defaultDark!
+            : false
+        }
+        lineWidth={
+          antdConfigProviderProps && "lineWidth" in antdConfigProviderProps
+            ? antdConfigProviderProps.lineWidth!
+            : 1
+        }
+        loadingText={
+          antdConfigProviderProps && "loadingText" in antdConfigProviderProps
+            ? antdConfigProviderProps.loadingText!
+            : undefined
+        }
+        removeLoading={
+          antdConfigProviderProps && "removeLoading" in antdConfigProviderProps
+            ? antdConfigProviderProps.removeLoading!
+            : undefined
+        }
+        sizeStep={
+          antdConfigProviderProps && "sizeStep" in antdConfigProviderProps
+            ? antdConfigProviderProps.sizeStep!
+            : 4
+        }
+        sizeUnit={
+          antdConfigProviderProps && "sizeUnit" in antdConfigProviderProps
+            ? antdConfigProviderProps.sizeUnit!
+            : 4
+        }
+        themeStyles={
+          antdConfigProviderProps && "themeStyles" in antdConfigProviderProps
+            ? antdConfigProviderProps.themeStyles!
+            : true
+              ? {
+                  fontFamily: "Poppins",
+                  fontSize: "16px",
+                  fontWeight: "300",
+                  lineHeight: "1.65",
+                  color: "#222222",
+                  letterSpacing: "normal"
+                }
+              : undefined
+        }
+        wireframe={
+          antdConfigProviderProps && "wireframe" in antdConfigProviderProps
+            ? antdConfigProviderProps.wireframe!
+            : false
+        }
+      >
+        {children}
+      </AntdConfigProvider>
     </ParallaxProviderWrapper>
   );
 }

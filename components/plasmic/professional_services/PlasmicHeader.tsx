@@ -130,6 +130,8 @@ function PlasmicHeader__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const globalVariants = _useGlobalVariants();
+
   const styleTokensClassNames = _useStyleTokens();
 
   return (
@@ -175,7 +177,11 @@ function PlasmicHeader__RenderFunc(props: {
                 data-plasmic-override={overrides.img}
                 alt={""}
                 className={classNames(sty.img)}
-                displayHeight={"118px"}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "117px"
+                    : "118px"
+                }
                 displayMaxHeight={"74px"}
                 displayMaxWidth={"240px"}
                 displayMinHeight={"0"}
@@ -208,7 +214,7 @@ function PlasmicHeader__RenderFunc(props: {
                 href={`/Services`}
                 platform={"nextjs"}
               >
-                {"Services"}
+                {"Produtos"}
               </PlasmicLink__>
               <PlasmicLink__
                 className={classNames(
@@ -221,7 +227,7 @@ function PlasmicHeader__RenderFunc(props: {
                 href={`/stories`}
                 platform={"nextjs"}
               >
-                {"Stories"}
+                {"Sobre n\u00f3s"}
               </PlasmicLink__>
               <PlasmicLink__
                 className={classNames(
@@ -234,7 +240,7 @@ function PlasmicHeader__RenderFunc(props: {
                 href={`/about`}
                 platform={"nextjs"}
               >
-                {"About us"}
+                {"Nossas Tecnologias"}
               </PlasmicLink__>
               <PlasmicLink__
                 className={classNames(
@@ -244,10 +250,10 @@ function PlasmicHeader__RenderFunc(props: {
                   sty.link___48Pic
                 )}
                 component={Link}
-                href={`/contact`}
+                href={"http://wa.me/5516991366165"}
                 platform={"nextjs"}
               >
-                {"Contact us"}
+                {"Seja um Distribuidor"}
               </PlasmicLink__>
             </div>
           </div>
