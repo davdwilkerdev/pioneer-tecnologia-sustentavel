@@ -61,6 +61,7 @@ import {
 
 import Header from "../../Header"; // plasmic-import: lKu0B9xgLMgZ/component
 import Tilt from "@plasmicpkgs/react-parallax-tilt";
+import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import Button from "../../Button"; // plasmic-import: vFerdvZMwcM9/component
 import Testimonial from "../../Testimonial"; // plasmic-import: 0tgqUcDpHMTR/component
 import CtaBottom from "../../CtaBottom"; // plasmic-import: Su-8_eq-d-9U/component
@@ -74,6 +75,7 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: m1XWyRcacryEyc
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: DhoSWFmFQCu7/css
 
 import CheckSvgIcon from "./icons/PlasmicIcon__CheckSvg"; // plasmic-import: 57zAO7P9sacL/icon
+import PhoneVectorSvgIcon from "./icons/PlasmicIcon__PhoneVectorSvg"; // plasmic-import: KWkePGqocTiV/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: QPUNRn_j-mSY/icon
 import Icon13Icon from "./icons/PlasmicIcon__Icon13"; // plasmic-import: rQwqLCMj22il/icon
 import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: 9W7E88pPhR-8/icon
@@ -98,6 +100,7 @@ export type PlasmicHomepage__OverridesType = {
   row3?: Flex__<"div">;
   info?: Flex__<"div">;
   tilt?: Flex__<typeof Tilt>;
+  reveal?: Flex__<typeof Reveal>;
   companiesSection?: Flex__<"div">;
   container2?: Flex__<"div">;
   ctaBottom?: Flex__<typeof CtaBottom>;
@@ -146,6 +149,24 @@ function PlasmicHomepage__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const globalVariants = _useGlobalVariants();
+
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "variable",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ""
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
 
   const styleTokensClassNames = _useStyleTokens();
 
@@ -218,7 +239,11 @@ function PlasmicHomepage__RenderFunc(props: {
                         <PlasmicImg__
                           alt={""}
                           className={classNames(sty.img__lJelr)}
-                          displayHeight={"240px"}
+                          displayHeight={
+                            hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? "0px"
+                              : "240px"
+                          }
                           displayMaxHeight={"1064px"}
                           displayMaxWidth={"676px"}
                           displayMinHeight={"0"}
@@ -303,26 +328,41 @@ function PlasmicHomepage__RenderFunc(props: {
                         </span>
                       </React.Fragment>
                     </div>
-                    <Button
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button___75PMe
-                      )}
-                      color={"blackCoffee"}
-                      submitsForm={true}
+                    <Reveal
+                      data-plasmic-name={"reveal"}
+                      data-plasmic-override={overrides.reveal}
+                      className={classNames("__wab_instance", sty.reveal)}
+                      triggerOnce={true}
                     >
-                      <div
+                      <Button
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___2UDzQ
+                          "__wab_instance",
+                          sty.button___75PMe
                         )}
+                        color={"green"}
+                        submitsForm={true}
                       >
-                        {hasVariant(globalVariants, "screen", "mobileOnly")
-                          ? "Get In touch"
-                          : "Get In touch"}
-                      </div>
-                    </Button>
+                        <PhoneVectorSvgIcon
+                          className={classNames(
+                            projectcss.all,
+                            sty.svg___3Tk94
+                          )}
+                          role={"img"}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___2UDzQ
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "Get In touch"
+                            : "Entre em contato"}
+                        </div>
+                      </Button>
+                    </Reveal>
                   </div>
                 </div>
               </div>
@@ -983,17 +1023,19 @@ const PlasmicDescendants = {
     "row3",
     "info",
     "tilt",
+    "reveal",
     "companiesSection",
     "container2",
     "ctaBottom",
     "footer"
   ],
   header: ["header"],
-  hero: ["hero", "container7", "row3", "info", "tilt"],
-  container7: ["container7", "row3", "info", "tilt"],
-  row3: ["row3", "info", "tilt"],
-  info: ["info", "tilt"],
+  hero: ["hero", "container7", "row3", "info", "tilt", "reveal"],
+  container7: ["container7", "row3", "info", "tilt", "reveal"],
+  row3: ["row3", "info", "tilt", "reveal"],
+  info: ["info", "tilt", "reveal"],
   tilt: ["tilt"],
+  reveal: ["reveal"],
   companiesSection: ["companiesSection", "container2"],
   container2: ["container2"],
   ctaBottom: ["ctaBottom"],
@@ -1010,6 +1052,7 @@ type NodeDefaultElementType = {
   row3: "div";
   info: "div";
   tilt: typeof Tilt;
+  reveal: typeof Reveal;
   companiesSection: "div";
   container2: "div";
   ctaBottom: typeof CtaBottom;
@@ -1084,6 +1127,7 @@ export const PlasmicHomepage = Object.assign(
     row3: makeNodeComponent("row3"),
     info: makeNodeComponent("info"),
     tilt: makeNodeComponent("tilt"),
+    reveal: makeNodeComponent("reveal"),
     companiesSection: makeNodeComponent("companiesSection"),
     container2: makeNodeComponent("container2"),
     ctaBottom: makeNodeComponent("ctaBottom"),

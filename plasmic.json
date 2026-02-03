@@ -739,6 +739,11 @@
           "id": "HUN4yLSYRr2M",
           "name": "Fundo Site 2.jpg",
           "filePath": "../public/plasmic/professional_services/images/fundoSite2Jpg.jpg"
+        },
+        {
+          "id": "Qb0_MC0U7JtR",
+          "name": "Dundo.jpg",
+          "filePath": "../public/plasmic/professional_services/images/dundoJpg.jpg"
         }
       ],
       "indirect": false,
