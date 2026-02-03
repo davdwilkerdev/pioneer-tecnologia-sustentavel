@@ -143,8 +143,10 @@
 .link__hwhsg {
   position: relative;
   color: #000000;
+  margin-top: 0px;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
   padding: 12px 16px;
-  margin: 0px 2.5px;
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .link__hwhsg {

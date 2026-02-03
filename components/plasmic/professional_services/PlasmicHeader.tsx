@@ -211,7 +211,6 @@ function PlasmicHeader__RenderFunc(props: {
                   sty.link__hwhsg
                 )}
                 component={Link}
-                href={`/Services`}
                 platform={"nextjs"}
               >
                 {"Produtos"}
@@ -224,7 +223,6 @@ function PlasmicHeader__RenderFunc(props: {
                   sty.link__kqnWb
                 )}
                 component={Link}
-                href={`/stories`}
                 platform={"nextjs"}
               >
                 {"Sobre n\u00f3s"}
@@ -237,7 +235,6 @@ function PlasmicHeader__RenderFunc(props: {
                   sty.link__p8KXz
                 )}
                 component={Link}
-                href={`/about`}
                 platform={"nextjs"}
               >
                 {"Nossas Tecnologias"}
