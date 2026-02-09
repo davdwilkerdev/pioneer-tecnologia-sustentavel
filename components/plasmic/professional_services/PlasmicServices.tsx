@@ -71,6 +71,8 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: m1XWyRcacryEyco6uPV1CR/projectcss
 import sty from "./PlasmicServices.module.css"; // plasmic-import: bJFQWGdGnDO3/css
 
+import Asset1Svg2Icon from "./icons/PlasmicIcon__Asset1Svg2"; // plasmic-import: OyrJi1cbWLm4/icon
+import Asset3SvgIcon from "./icons/PlasmicIcon__Asset3Svg"; // plasmic-import: ia1FitBk10_u/icon
 import Icon8Icon from "./icons/PlasmicIcon__Icon8"; // plasmic-import: QPUNRn_j-mSY/icon
 
 createPlasmicElementProxy;
@@ -90,6 +92,7 @@ export type PlasmicServices__OverridesType = {
   pageBanerSection?: Flex__<"div">;
   h1?: Flex__<"h1">;
   popover?: Flex__<typeof AntdPopover>;
+  descricaoMulti?: Flex__<"div">;
   section?: Flex__<"section">;
   h2?: Flex__<"h2">;
   footer?: Flex__<typeof Footer>;
@@ -142,7 +145,7 @@ function PlasmicServices__RenderFunc(props: {
         path: "popover.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -215,8 +218,120 @@ function PlasmicServices__RenderFunc(props: {
                   data-plasmic-override={overrides.popover}
                   arrow={true}
                   className={classNames("__wab_instance", sty.popover)}
-                  content={null}
-                  contentText={"Popover contents"}
+                  content={
+                    <div
+                      data-plasmic-name={"descricaoMulti"}
+                      data-plasmic-override={overrides.descricaoMulti}
+                      className={classNames(projectcss.all, sty.descricaoMulti)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__pGxbM
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <h3
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.h3,
+                                projectcss.__wab_text,
+                                sty.h3__rJhs
+                              )}
+                            >
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#028C1B" }}
+                                >
+                                  {"Pioneer Multilimpador"}
+                                </span>
+                              </React.Fragment>
+                            </h3>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___2XkR6
+                        )}
+                      >
+                        {
+                          "Indicado para limpeza por pulveriza\u00e7\u00e3o, com ou sem enx\u00e1gue, em diversas superf\u00edcies, como paredes, revestimentos, f\u00f3rmicas, chapas, fog\u00f5es, geladeiras, macas, pisos vitrificados, cer\u00e2micas, m\u00e1rmores, granitos, porcelanatos, pisos vin\u00edlicos, paviflex, estofados, carpetes, couros, pl\u00e1sticos, borrachas, acr\u00edlicos, policarbonatos e superf\u00edcies lav\u00e1veis em geral."
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__xgtS
+                        )}
+                      >
+                        {"Dilui\u00e7\u00e3o"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__en7HP
+                        )}
+                      >
+                        {
+                          "\u2022 Limpeza pesada: 1:5 a 1:10\n\u2022 Limpeza de manuten\u00e7\u00e3o: 1:10 a 1:20"
+                        }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__fvKZu
+                        )}
+                      >
+                        {"Embalagens Dispon\u00edveis"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__kGpdT
+                        )}
+                      >
+                        <Asset1Svg2Icon
+                          className={classNames(projectcss.all, sty.svg__bfYi6)}
+                          role={"img"}
+                        />
+
+                        <Asset3SvgIcon
+                          className={classNames(
+                            projectcss.all,
+                            sty.svg___16Xrk
+                          )}
+                          role={"img"}
+                        />
+                      </div>
+                    </div>
+                  }
+                  contentText={(() => {
+                    try {
+                      return undefined;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "sdvsd";
+                      }
+                      throw e;
+                    }
+                  })()}
+                  defaultOpen={false}
                   defaultStylesClassName={classNames(
                     projectcss.root_reset,
                     projectcss.plasmic_default_styles,
@@ -238,12 +353,12 @@ function PlasmicServices__RenderFunc(props: {
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__rmWoj)}
-                    displayHeight={"auto"}
+                    displayHeight={"277px"}
                     displayMaxHeight={"none"}
-                    displayMaxWidth={"5%"}
+                    displayMaxWidth={"381%"}
                     displayMinHeight={"0"}
                     displayMinWidth={"0"}
-                    displayWidth={"50px"}
+                    displayWidth={"219px"}
                     loading={"lazy"}
                     src={{
                       src: "/plasmic/professional_services/images/multilimpador1LPng.png",
@@ -253,83 +368,6 @@ function PlasmicServices__RenderFunc(props: {
                     }}
                   />
                 </AntdPopover>
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___2Fj8J)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__pGxbM
-                    )}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h3
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h3,
-                            projectcss.__wab_text,
-                            sty.h3__rJhs
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "#028C1B" }}
-                            >
-                              {"Pioneer Multilimpador"}
-                            </span>
-                          </React.Fragment>
-                        </h3>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___2XkR6
-                    )}
-                  >
-                    {
-                      "Indicado para limpeza por pulveriza\u00e7\u00e3o, com ou sem enx\u00e1gue, em diversas superf\u00edcies, como paredes, revestimentos, f\u00f3rmicas, chapas, fog\u00f5es, geladeiras, macas, pisos vitrificados, cer\u00e2micas, m\u00e1rmores, granitos, porcelanatos, pisos vin\u00edlicos, paviflex, estofados, carpetes, couros, pl\u00e1sticos, borrachas, acr\u00edlicos, policarbonatos e superf\u00edcies lav\u00e1veis em geral."
-                    }
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__xgtS
-                    )}
-                  >
-                    {"Dilui\u00e7\u00e3o"}
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__en7HP
-                    )}
-                  >
-                    {
-                      "\u2022 Limpeza pesada: 1:5 a 1:10\n\u2022 Limpeza de manuten\u00e7\u00e3o: 1:10 a 1:20"
-                    }
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__fvKZu
-                    )}
-                  >
-                    {"Embalagens Dispon\u00edveis"}
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -529,6 +567,7 @@ const PlasmicDescendants = {
     "pageBanerSection",
     "h1",
     "popover",
+    "descricaoMulti",
     "section",
     "h2",
     "footer"
@@ -536,7 +575,8 @@ const PlasmicDescendants = {
   header: ["header"],
   pageBanerSection: ["pageBanerSection", "h1"],
   h1: ["h1"],
-  popover: ["popover"],
+  popover: ["popover", "descricaoMulti"],
+  descricaoMulti: ["descricaoMulti"],
   section: ["section", "h2"],
   h2: ["h2"],
   footer: ["footer"]
@@ -550,6 +590,7 @@ type NodeDefaultElementType = {
   pageBanerSection: "div";
   h1: "h1";
   popover: typeof AntdPopover;
+  descricaoMulti: "div";
   section: "section";
   h2: "h2";
   footer: typeof Footer;
@@ -621,6 +662,7 @@ export const PlasmicServices = Object.assign(
     pageBanerSection: makeNodeComponent("pageBanerSection"),
     h1: makeNodeComponent("h1"),
     popover: makeNodeComponent("popover"),
+    descricaoMulti: makeNodeComponent("descricaoMulti"),
     section: makeNodeComponent("section"),
     h2: makeNodeComponent("h2"),
     footer: makeNodeComponent("footer"),
