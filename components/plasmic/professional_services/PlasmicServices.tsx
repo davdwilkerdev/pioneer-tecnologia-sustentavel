@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Header from "../../Header"; // plasmic-import: lKu0B9xgLMgZ/component
+import { AntdPopover } from "@plasmicpkgs/antd5/skinny/registerPopover";
 import ServicesWhite from "../../ServicesWhite"; // plasmic-import: JZUuLltS-WiV/component
 import Footer from "../../Footer"; // plasmic-import: U1-LJF1kZHcJ/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: m1XWyRcacryEyco6uPV1CR/projectModule
@@ -88,6 +89,9 @@ export type PlasmicServices__OverridesType = {
   header?: Flex__<typeof Header>;
   pageBanerSection?: Flex__<"div">;
   h1?: Flex__<"h1">;
+  popover?: Flex__<typeof AntdPopover>;
+  section?: Flex__<"section">;
+  h2?: Flex__<"h2">;
   footer?: Flex__<typeof Footer>;
 };
 
@@ -132,7 +136,23 @@ function PlasmicServices__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const globalVariants = _useGlobalVariants();
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "popover.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
 
   const styleTokensClassNames = _useStyleTokens();
 
@@ -190,24 +210,49 @@ function PlasmicServices__RenderFunc(props: {
           <div className={classNames(projectcss.all, sty.freeBox__umFG)}>
             <div className={classNames(projectcss.all, sty.freeBox__moAhR)}>
               <div className={classNames(projectcss.all, sty.freeBox__gYngR)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__rmWoj)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"5%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/professional_services/images/multilimpador1LPng.png",
-                    fullWidth: 601,
-                    fullHeight: 1937,
-                    aspectRatio: undefined
+                <AntdPopover
+                  data-plasmic-name={"popover"}
+                  data-plasmic-override={overrides.popover}
+                  arrow={true}
+                  className={classNames("__wab_instance", sty.popover)}
+                  content={null}
+                  contentText={"Popover contents"}
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    styleTokensClassNames
+                  )}
+                  mouseEnterDelay={0}
+                  mouseLeaveDelay={0}
+                  onOpenChange={async (...eventArgs: any) => {
+                    generateStateOnChangeProp($state, [
+                      "popover",
+                      "open"
+                    ]).apply(null, eventArgs);
                   }}
-                />
-
+                  open={generateStateValueProp($state, ["popover", "open"])}
+                  popoverScopeClassName={sty["popover__popover"]}
+                  title={null}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__rmWoj)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"5%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"50px"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/professional_services/images/multilimpador1LPng.png",
+                      fullWidth: 601,
+                      fullHeight: 1937,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </AntdPopover>
                 <div
                   className={classNames(projectcss.all, sty.freeBox___2Fj8J)}
                 >
@@ -262,375 +307,37 @@ function PlasmicServices__RenderFunc(props: {
                       sty.text__xgtS
                     )}
                   >
-                    {"Enter some text"}
+                    {"Dilui\u00e7\u00e3o"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__en7HP
+                    )}
+                  >
+                    {
+                      "\u2022 Limpeza pesada: 1:5 a 1:10\n\u2022 Limpeza de manuten\u00e7\u00e3o: 1:10 a 1:20"
+                    }
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__fvKZu
+                    )}
+                  >
+                    {"Embalagens Dispon\u00edveis"}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <section className={classNames(projectcss.all, sty.section__w5Xn7)}>
-            <div className={classNames(projectcss.all, sty.freeBox__dooVw)}>
-              <div className={classNames(projectcss.all, sty.freeBox___5VVd)}>
-                <div className={classNames(projectcss.all, sty.freeBox__moeI3)}>
-                  <div
-                    className={classNames(projectcss.all, sty.columns___8Nqqh)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.column___7PcBh)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__aqBdP
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3___83ESg
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__hdwVn)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__nb9QE
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__pfupS
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__yUv8K)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite___57AjF
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__sj8JA
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className={classNames(projectcss.all, sty.section__cdrkB)}>
-            <h2
-              className={classNames(
-                projectcss.all,
-                projectcss.h2,
-                projectcss.__wab_text,
-                sty.h2__evzHx
-              )}
-            >
-              {hasVariant(globalVariants, "screen", "mobileOnly")
-                ? "Why Choose Us"
-                : "Our process"}
-            </h2>
-            <div className={classNames(projectcss.all, sty.freeBox___5ZJ5X)}>
-              <div className={classNames(projectcss.all, sty.columns__qQO)}>
-                <div className={classNames(projectcss.all, sty.column__lDAef)}>
-                  <ServicesWhite
-                    className={classNames(
-                      "__wab_instance",
-                      sty.servicesWhite__xfBm
-                    )}
-                    slot={
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__id5Oz
-                        )}
-                      >
-                        {"Services main"}
-                      </h3>
-                    }
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__j6Vdm)}>
-                  <ServicesWhite
-                    className={classNames(
-                      "__wab_instance",
-                      sty.servicesWhite___6Hmvi
-                    )}
-                    slot={
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__ptjpw
-                        )}
-                      >
-                        {"Services main"}
-                      </h3>
-                    }
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__ct7AO)}>
-                  <ServicesWhite
-                    className={classNames(
-                      "__wab_instance",
-                      sty.servicesWhite__okV1K
-                    )}
-                    slot={
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__ct3YG
-                        )}
-                      >
-                        {"Services main"}
-                      </h3>
-                    }
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__sHwd)}>
-                  <ServicesWhite
-                    className={classNames(
-                      "__wab_instance",
-                      sty.servicesWhite__jsExr
-                    )}
-                    slot={
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__sdnVw
-                        )}
-                      >
-                        {"Services main"}
-                      </h3>
-                    }
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__f21Gf)}>
-                  <ServicesWhite
-                    className={classNames(
-                      "__wab_instance",
-                      sty.servicesWhite__rCvJ3
-                    )}
-                    slot={
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3___6GFlG
-                        )}
-                      >
-                        {"Services main"}
-                      </h3>
-                    }
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__f9Dq3)}>
-                  <ServicesWhite
-                    className={classNames(
-                      "__wab_instance",
-                      sty.servicesWhite__jmfne
-                    )}
-                    slot={
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3___2J9Xk
-                        )}
-                      >
-                        {"Services main"}
-                      </h3>
-                    }
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className={classNames(projectcss.all, sty.section__hyPpc)}>
-            <div className={classNames(projectcss.all, sty.freeBox__rwojU)}>
-              <div className={classNames(projectcss.all, sty.freeBox___0D8Ht)}>
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___6AfpB)}
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.columns__hSKb)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.column__nytY4)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__dIiYr
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__fdbZ
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column___6C2F)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__seExn
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__gmIm
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__ntjRh)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__y8HbX
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__mJaQr
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__c0Kly)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__nneXm
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__tdmWt
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__zvADw)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__kLa9
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3___3Ghu
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column___7XDCe)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__oxHkX
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__osplX
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className={classNames(projectcss.all, sty.section__qbLR)}>
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
+          >
             <div className={classNames(projectcss.all, sty.freeBox__mNix7)}>
               <div className={classNames(projectcss.all, sty.freeBox___1DbIy)}>
                 <div className={classNames(projectcss.all, sty.freeBox__qM5L)}>
@@ -668,11 +375,13 @@ function PlasmicServices__RenderFunc(props: {
                         )}
                       >
                         <h2
+                          data-plasmic-name={"h2"}
+                          data-plasmic-override={overrides.h2}
                           className={classNames(
                             projectcss.all,
                             projectcss.h2,
                             projectcss.__wab_text,
-                            sty.h2__jvWl3
+                            sty.h2
                           )}
                         >
                           {"Why Choose Us"}
@@ -814,10 +523,22 @@ function PlasmicServices__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "header", "pageBanerSection", "h1", "footer"],
+  root: [
+    "root",
+    "header",
+    "pageBanerSection",
+    "h1",
+    "popover",
+    "section",
+    "h2",
+    "footer"
+  ],
   header: ["header"],
   pageBanerSection: ["pageBanerSection", "h1"],
   h1: ["h1"],
+  popover: ["popover"],
+  section: ["section", "h2"],
+  h2: ["h2"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -828,6 +549,9 @@ type NodeDefaultElementType = {
   header: typeof Header;
   pageBanerSection: "div";
   h1: "h1";
+  popover: typeof AntdPopover;
+  section: "section";
+  h2: "h2";
   footer: typeof Footer;
 };
 
@@ -896,6 +620,9 @@ export const PlasmicServices = Object.assign(
     header: makeNodeComponent("header"),
     pageBanerSection: makeNodeComponent("pageBanerSection"),
     h1: makeNodeComponent("h1"),
+    popover: makeNodeComponent("popover"),
+    section: makeNodeComponent("section"),
+    h2: makeNodeComponent("h2"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicServices
