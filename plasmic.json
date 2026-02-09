@@ -1106,6 +1106,26 @@
           "id": "MxCgCCryYQGs",
           "name": "Multilimpador 1L.png",
           "filePath": "../public/plasmic/professional_services/images/multilimpador1LPng.png"
+        },
+        {
+          "id": "vewSs0j2ke0o",
+          "name": "Capa.png 2",
+          "filePath": "../public/plasmic/professional_services/images/capaPng2.png"
+        },
+        {
+          "id": "OLRHP_2aqKQC",
+          "name": "Porcelato Capa.png",
+          "filePath": "../public/plasmic/professional_services/images/porcelatoCapaPng.png"
+        },
+        {
+          "id": "TiDZ4n3TvZU7",
+          "name": "Porcelato Pesada 5L.png",
+          "filePath": "../public/plasmic/professional_services/images/porcelatoPesada5LPng.png"
+        },
+        {
+          "id": "2OyVgcvEl3Wl",
+          "name": "Porcelato Pesada Capa.png",
+          "filePath": "../public/plasmic/professional_services/images/porcelatoPesadaCapaPng.png"
         }
       ],
       "indirect": false,
