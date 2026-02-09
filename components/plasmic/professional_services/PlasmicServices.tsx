@@ -88,8 +88,6 @@ export type PlasmicServices__OverridesType = {
   header?: Flex__<typeof Header>;
   pageBanerSection?: Flex__<"div">;
   h1?: Flex__<"h1">;
-  img?: Flex__<typeof PlasmicImg__>;
-  text?: Flex__<"div">;
   footer?: Flex__<typeof Footer>;
 };
 
@@ -185,8 +183,89 @@ function PlasmicServices__RenderFunc(props: {
                   sty.h1
                 )}
               >
-                {"Services"}
+                {"Nossos produtos"}
               </h1>
+            </div>
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__umFG)}>
+            <div className={classNames(projectcss.all, sty.freeBox__moAhR)}>
+              <div className={classNames(projectcss.all, sty.freeBox__gYngR)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__rmWoj)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"5%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/professional_services/images/multilimpador1LPng.png",
+                    fullWidth: 601,
+                    fullHeight: 1937,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___2Fj8J)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__pGxbM
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h3
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h3,
+                            projectcss.__wab_text,
+                            sty.h3__rJhs
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "#028C1B" }}
+                            >
+                              {"Pioneer Multilimpador"}
+                            </span>
+                          </React.Fragment>
+                        </h3>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___2XkR6
+                    )}
+                  >
+                    {
+                      "Indicado para limpeza por pulveriza\u00e7\u00e3o, com ou sem enx\u00e1gue, em diversas superf\u00edcies, como paredes, revestimentos, f\u00f3rmicas, chapas, fog\u00f5es, geladeiras, macas, pisos vitrificados, cer\u00e2micas, m\u00e1rmores, granitos, porcelanatos, pisos vin\u00edlicos, paviflex, estofados, carpetes, couros, pl\u00e1sticos, borrachas, acr\u00edlicos, policarbonatos e superf\u00edcies lav\u00e1veis em geral."
+                    }
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__xgtS
+                    )}
+                  >
+                    {"Enter some text"}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <section className={classNames(projectcss.all, sty.section__w5Xn7)}>
@@ -233,72 +312,6 @@ function PlasmicServices__RenderFunc(props: {
                               projectcss.h3,
                               projectcss.__wab_text,
                               sty.h3__pfupS
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column___6UmAw)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__xgoS3
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__fk8Lw
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__qbiPd)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__m17E
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__yKn9H
-                            )}
-                          >
-                            {"Services main"}
-                          </h3>
-                        }
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column___1Luw0)}
-                    >
-                      <ServicesWhite
-                        className={classNames(
-                          "__wab_instance",
-                          sty.servicesWhite__r7Hno
-                        )}
-                        slot={
-                          <h3
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.h3,
-                              projectcss.__wab_text,
-                              sty.h3__bzDPo
                             )}
                           >
                             {"Services main"}
@@ -628,10 +641,8 @@ function PlasmicServices__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.column__km8Ei)}
                     >
                       <PlasmicImg__
-                        data-plasmic-name={"img"}
-                        data-plasmic-override={overrides.img}
                         alt={""}
-                        className={classNames(sty.img)}
+                        className={classNames(sty.img__yMgJf)}
                         displayHeight={"100%"}
                         displayMaxHeight={"none"}
                         displayMaxWidth={"100%"}
@@ -667,12 +678,10 @@ function PlasmicServices__RenderFunc(props: {
                           {"Why Choose Us"}
                         </h2>
                         <div
-                          data-plasmic-name={"text"}
-                          data-plasmic-override={overrides.text}
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text
+                            sty.text___9ZyF3
                           )}
                         >
                           {
@@ -805,12 +814,10 @@ function PlasmicServices__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "header", "pageBanerSection", "h1", "img", "text", "footer"],
+  root: ["root", "header", "pageBanerSection", "h1", "footer"],
   header: ["header"],
   pageBanerSection: ["pageBanerSection", "h1"],
   h1: ["h1"],
-  img: ["img"],
-  text: ["text"],
   footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -821,8 +828,6 @@ type NodeDefaultElementType = {
   header: typeof Header;
   pageBanerSection: "div";
   h1: "h1";
-  img: typeof PlasmicImg__;
-  text: "div";
   footer: typeof Footer;
 };
 
@@ -891,8 +896,6 @@ export const PlasmicServices = Object.assign(
     header: makeNodeComponent("header"),
     pageBanerSection: makeNodeComponent("pageBanerSection"),
     h1: makeNodeComponent("h1"),
-    img: makeNodeComponent("img"),
-    text: makeNodeComponent("text"),
     footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicServices

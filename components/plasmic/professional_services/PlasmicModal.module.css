@@ -1,0 +1,97 @@
+.ariaDialogTrigger:global(.__wab_instance) {
+  position: relative;
+}
+.svg__hwzWn {
+  position: relative;
+  height: 1em;
+}
+.svg__w8VFn {
+  position: relative;
+  height: 1em;
+}
+.ariaModal:global(.__wab_instance) {
+  background: var(--token-qQnBow3beP8R);
+  display: block;
+  color: var(--token-53WMGnaZ0Ijo);
+  font-family: var(--token-885t8My_fmrw);
+  font-size: var(--token-E5Sx_JgFXEWk);
+  line-height: var(--token-RQcG15s4lxG6);
+  outline-style: none;
+  box-shadow: 0px 24px 48px -12px #00000040;
+  border-radius: var(--token-WieoZaz6vu0B);
+}
+.pcls_tsZtrWYYpN67 {
+  background: var(--token-_fs531W-Xvwm);
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  outline: none;
+}
+.ariaDialog:global(.__wab_instance) {
+  max-width: 90vw;
+  object-fit: cover;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  outline-style: none;
+}
+.h3__dq1Yb {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-weight: 700;
+  font-size: var(--token-WDdd1uAmIRWC);
+  min-width: 0;
+  padding: var(--token-AKOqADbCllgy);
+}
+.scrollableContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: auto;
+  padding-left: var(--token-AKOqADbCllgy);
+  padding-right: var(--token-AKOqADbCllgy);
+}
+.freeBox__cfuku {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: var(--token-VTGAy2_0nNQ2);
+}
+.text__vZc2N {
+  position: relative;
+}
+.freeBox___5FlW {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  min-width: 0;
+  padding: var(--token-AKOqADbCllgy);
+}
+.svg___0Ptu {
+  position: relative;
+  height: 1em;
+}
+.text__p4Dsg {
+  padding-left: 0px;
+}
+.svg__mYhJ {
+  position: relative;
+  height: 1em;
+}
