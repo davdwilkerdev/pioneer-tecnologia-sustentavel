@@ -87,8 +87,7 @@ export type PlasmicServices__OverridesType = {
   root?: Flex__<"div">;
   header?: Flex__<typeof Header>;
   pageBanerSection?: Flex__<"div">;
-  h1?: Flex__<"h1">;
-  columns?: Flex__<"div">;
+  produtos?: Flex__<"div">;
   multilimpador?: Flex__<typeof AntdPopover>;
   descricaoMulti?: Flex__<"div">;
   porcelato?: Flex__<typeof AntdPopover>;
@@ -208,23 +207,36 @@ function PlasmicServices__RenderFunc(props: {
           >
             <div className={classNames(projectcss.all, sty.freeBox__my1Q)}>
               <h1
-                data-plasmic-name={"h1"}
-                data-plasmic-override={overrides.h1}
                 className={classNames(
                   projectcss.all,
                   projectcss.h1,
                   projectcss.__wab_text,
-                  sty.h1
+                  sty.h1__bEOk3
                 )}
               >
-                {"Nossos produtos"}
+                <React.Fragment>
+                  <React.Fragment>{""}</React.Fragment>
+                  {
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__yzS0F
+                      )}
+                    >
+                      {"Nossos  produtos"}
+                    </h1>
+                  }
+                  <React.Fragment>{""}</React.Fragment>
+                </React.Fragment>
               </h1>
             </div>
           </div>
           <div
-            data-plasmic-name={"columns"}
-            data-plasmic-override={overrides.columns}
-            className={classNames(projectcss.all, sty.columns)}
+            data-plasmic-name={"produtos"}
+            data-plasmic-override={overrides.produtos}
+            className={classNames(projectcss.all, sty.produtos)}
           >
             <div className={classNames(projectcss.all, sty.column__dJj6G)}>
               <AntdPopover
@@ -748,8 +760,7 @@ const PlasmicDescendants = {
     "root",
     "header",
     "pageBanerSection",
-    "h1",
-    "columns",
+    "produtos",
     "multilimpador",
     "descricaoMulti",
     "porcelato",
@@ -758,10 +769,9 @@ const PlasmicDescendants = {
     "descricaoMulti3"
   ],
   header: ["header"],
-  pageBanerSection: ["pageBanerSection", "h1"],
-  h1: ["h1"],
-  columns: [
-    "columns",
+  pageBanerSection: ["pageBanerSection"],
+  produtos: [
+    "produtos",
     "multilimpador",
     "descricaoMulti",
     "porcelato",
@@ -783,8 +793,7 @@ type NodeDefaultElementType = {
   root: "div";
   header: typeof Header;
   pageBanerSection: "div";
-  h1: "h1";
-  columns: "div";
+  produtos: "div";
   multilimpador: typeof AntdPopover;
   descricaoMulti: "div";
   porcelato: typeof AntdPopover;
@@ -857,8 +866,7 @@ export const PlasmicServices = Object.assign(
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
     pageBanerSection: makeNodeComponent("pageBanerSection"),
-    h1: makeNodeComponent("h1"),
-    columns: makeNodeComponent("columns"),
+    produtos: makeNodeComponent("produtos"),
     multilimpador: makeNodeComponent("multilimpador"),
     descricaoMulti: makeNodeComponent("descricaoMulti"),
     porcelato: makeNodeComponent("porcelato"),
